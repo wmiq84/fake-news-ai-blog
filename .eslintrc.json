@@ -1,0 +1,13 @@
+{
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "CallExpression[callee.name='require']",
+        "message": "Require statements are forbidden.",
+        "except": ["./tailwind.config.js"]
+      }
+    ]
+  }
+}
